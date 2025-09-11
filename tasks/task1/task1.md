@@ -26,57 +26,57 @@ Python基础语法、认识生成式AI
 
 ### 1. 配置环境
 
-- 魔(ti)法(zhi)的使用
+- 科学上网工具的使用
 
 - 安装IDE集成开发环境
 
-初学者可以选择使用[PyCharm](https://www.jetbrains.com.cn/pycharm/), 可以[申请学生免费许可证](https://blog.jetbrains.com/zh-hans/blog/2022/08/24/2022-jetbrains-student-program/)以使用专业版
+初学者可以选择使用[PyCharm](https://www.jetbrains.com.cn/pycharm/)，可以[申请学生免费许可证](https://blog.jetbrains.com/zh-hans/blog/2022/08/24/2022-jetbrains-student-program/)以使用专业版。
 
-个人更建议使用[VSCode](https://code.visualstudio.com/)（主要是PyCharm的Jupyter notebook太过难用， 建议初学者可以多使用Jupyter来编写程序）
+个人更建议使用[VSCode](https://code.visualstudio.com/)（主要是PyCharm的Jupyter notebook太过难用，建议初学者可以多使用Jupyter来编写程序）。
 
 - 安装Conda环境
 
-使用[miniconda](https://docs.anaconda.com/miniconda/)就可以了,当然如果你不喜欢conda这样会污染命令窗口，使用pyenv或venv也都是可以的
+使用[miniconda](https://docs.anaconda.com/miniconda/)就可以了，当然如果你不喜欢conda这样会污染命令窗口，使用pyenv或venv也都是可以的。
 
-- 学习python虚拟环境的配置
+- 学习Python虚拟环境的配置
 
-初学者一定要注意这个问题，从一开始就养成好的习惯
+初学者一定要注意这个问题，从一开始就养成好的习惯。
 
 ### 2. 推荐教程
 
-- python基础：
+- Python基础：
 
-1. Crossin编程教室 [Python 入门指南 (python666.cn)](https://python666.cn/cls/lesson/list/)
-2. Python - 100天从新手到大师的前10节课 [jackfrued/Python-100-Days: Python - 100天从新手到大师 (github.com)](https://github.com/jackfrued/Python-100-Days)
-3. Python官方文档 [3.10.7 Documentation (python.org)](https://docs.python.org/zh-cn/3/)
-4. 菜鸟教程 [Python3 教程 | 菜鸟教程 (runoob.com)](https://www.runoob.com/python3/python3-tutorial.html)
-5. 廖雪峰的官⽅教程 [Python教程 - 廖雪峰的官方网站 (liaoxuefeng.com)](https://www.liaoxuefeng.com/wiki/1016959663602400)
-6. B站上有大量的入门基础课程，大家可以自行探索，找到适合自己的是最好的
-7. 如果你想要系统的学习的话，强烈推荐来自UCB的神课[CS61A](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Python/CS61A/)（课程难度较大，建议可以先选择一个更为友好的入门编程课程入门， 需要学习相关学习资料的话可以来群里问）
+1. Crossin编程教室 [Python 入门指南](https://python666.cn/cls/lesson/list/)
+2. Python - 100天从新手到大师的前10节课 [jackfrued/Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+3. Python官方文档 [3.10.7 Documentation](https://docs.python.org/zh-cn/3/)
+4. 菜鸟教程 [Python3 教程](https://www.runoob.com/python3/python3-tutorial.html)
+5. 廖雪峰的官方教程 [Python教程](https://www.liaoxuefeng.com/wiki/1016959663602400)
+6. B站上有大量的入门基础课程，大家可以自行探索，找到适合自己的是最好的。
+7. 如果你想要系统的学习的话，强烈推荐来自UCB的神课[CS61A](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Python/CS61A/)（课程难度较大，建议可以先选择一个更为友好的入门编程课程入门，需要学习相关学习资料的话可以来群里问）。
 
 - 生成式AI认识：
 
 [李宏毅2024 B站](https://www.bilibili.com/video/BV1BJ4m1e7g8/?spm_id_from=333.337.search-card.all.click&vd_source=e3594664d709db7578f4b2e76329df18)
 
-[李宏毅2024 油管](https://www.youtube.com/watch?v=AVIKFXLCPY8&t=1s)
+[李宏毅2024 YouTube](https://www.youtube.com/watch?v=AVIKFXLCPY8&t=1s)
 
 ### 3. 检验学习内容
 
-在你完成python基础的知识学习后，你需要确保你对以下知识点能正确回答（如果不能你仍可以通过b站视频以及网上文档的方式进行弥补）
+在你完成Python基础的知识学习后，你需要确保你对以下知识点能正确回答（如果不能，你仍可以通过B站视频以及网上文档的方式进行弥补）：
 
-- 数据结构List,Dict的使用
+- 数据结构List、Dict的使用
 - Lambda匿名函数
 - Decorator装饰器
-- 类Class，Magic Methods的使用
+- 类Class、Magic Methods的使用
 - re正则表达式的使用
 - 列表推导式
 - generator生成器（yield关键字）
 - OOP面向对象编程思想
-- Type Hint 类型注释
+- Type Hint类型注释
 
-你可以写一个文档详细解释这些内容以加深印象（可以使用markdown/jupyter的形式编写）
+你可以写一个文档详细解释这些内容以加深印象（可以使用markdown/jupyter的形式编写）。
 
-在完成生成式AI认识的学习后，你可以写一个文档介绍一下一个大型语言模型训练的基本步骤
+在完成生成式AI认识的学习后，你可以写一个文档介绍一下一个大型语言模型训练的基本步骤。
 
 ### 4. 完成作业
 
