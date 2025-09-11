@@ -104,7 +104,7 @@ Python基础语法、认识生成式AI
 
 #### 作业二 开发中
 
-#### 作业三 宝可梦对战！
+#### 作业三 宝可梦对战
 
 wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一天他的Switch坏掉了，为了在等待维修的过程中还能玩宝可梦游戏，他向你提出了以下的程序设计要求————
 
@@ -130,9 +130,9 @@ wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一
 
 这是wjord2023设计的4个宝可梦：
 
-1. **皮卡丘（PikaChu)**
+1. **皮卡丘 (PikaChu)**
 
-![](./阶段1.assets/BE1707F2-C858-4085-8A9C-1C282825D0D1.jpeg)
+![皮卡丘](./阶段1.assets/BE1707F2-C858-4085-8A9C-1C282825D0D1.jpeg)
 
 **HP**: 80 **攻击力**: 35 **防御力**: 5 **属性**: 电 **躲闪率**: 30%
 
@@ -142,7 +142,7 @@ wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一
 
 2. **妙蛙种子 (Bulbasaur)**
 
-![](./阶段1.assets/3A370008-CF12-4404-B088-634C466404AA.jpeg)
+![妙蛙种子](./阶段1.assets/3A370008-CF12-4404-B088-634C466404AA.jpeg)
 
 **HP**: 100 **攻击力**: 35 **防御力**: 10 **属性**: 草 **躲闪率**: 10%
 
@@ -152,7 +152,7 @@ wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一
 
 3. **杰尼龟（Squirtle）**
 
-![傑尼龜| 寶可夢圖鑑| The official Pokémon Website in Taiwan](./阶段1.assets/D9506539-335B-4856-9768-27203069DE8C.jpeg)
+![杰尼龟](./阶段1.assets/D9506539-335B-4856-9768-27203069DE8C.jpeg)
 
 **HP**: 80 **攻击力**: 25 **防御力**: 20 **属性**: 水 **躲闪率**: 20%
 
@@ -160,9 +160,9 @@ wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一
 
 **护盾 (Shield)：** 杰尼龟使用水流形成保护盾，减少下一回合受到的伤害50%
 
-4. **小火龙（Charmander）**
+4. **小火龙 (Charmander)**
 
-![](./阶段1.assets/A46CDBFA-F132-4DC0-BCCE-4506CB07B905.jpeg)
+![小火龙](./阶段1.assets/A46CDBFA-F132-4DC0-BCCE-4506CB07B905.jpeg)
 
 **HP**: 80 **攻击力**: 35 **防御力**: 15 **属性**: 火 **躲闪率**: 10%
 
@@ -174,7 +174,7 @@ wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一
 
 你需要实现类似这样命令行输出用于游玩该游戏：
 
-```
+``` log
 请选择3个宝可梦用于组成你的队伍：
 1.皮卡丘(电属性) 2.妙蛙种子(草属性) 3.杰尼龟(水属性) 4.小火龙(火属性)
 输入数字选择你的宝可梦: 1 2 4
@@ -221,7 +221,7 @@ wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一
 
 相关教程：
 
-<https://github.com/west2-online-reserve/collection-ai> 里面有Git使用和西二作业提交教程
+[https://github.com/west2-online-reserve/collection-ai](https://github.com/west2-online-reserve/collection-ai) 里面有Git使用和西二作业提交教程
 
 [Git工作流和核心原理 | GitHub基本操作 | VS Code里使用Git和关联GitHub](https://www.bilibili.com/video/BV1r3411F7kn/?share_source=copy_web&vd_source=31019e44b62a4369d4eab7afea0fcfdf)
 
