@@ -209,22 +209,22 @@ wjord2023是一个cool guy，他最近沉迷上了宝可梦游戏。可是有一
 ## 作业要求
 
 1. 不要抄袭
-2. 遇到不会可以多使用搜索引擎，实在没有找到解决方法可以来群里提问，作为一个CSer学习问问题的方式也非常重要，强烈建议阅读[别像弱智一样提问](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)这篇文章
-3. 不限制使用chatgpt等大语言模型工具，但你需要确保你了解模型生成的内容的每一个细节，最好你可以在使用大语言模型生成的代码部分注释上reference from chatgpt这样的内容
-4. 你还需要学习基本的git的使用，所有考核都采用git的方式进行上传
+2. 遇到不会可以多使用搜索引擎，实在没有找到解决方法可以来群里提问，作为一个CSer学习提问的方式也非常重要，强烈建议阅读[别像弱智一样提问](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)这篇文章
+3. 不限制使用ChatGPT等大语言模型工具，但你需要确保你了解模型生成的内容的每一个细节，最好你可以在使用大语言模型生成的代码部分注释上"reference from ChatGPT"这样的内容
+4. 你还需要学习基本的Git的使用，所有考核都采用Git的方式进行上传
 5. 作业内容可能会进行更新，请保持关注
 
 ## 作业提交方式
 
-1. 你需要学习github的使用，创建一个你自己的仓库用来存放你的代码实现
-2. 接着你需要如何使用git进行pr操作，在[solutions](https://github.com/west2-online-reserve/collection-ai/blob/main/task1/solutions.md)中填写你的仓库地址，这样便于你对你的实现进行更新
+1. 你需要学习GitHub的使用，创建一个你自己的仓库用来存放你的代码实现
+2. 接着你需要学习如何使用Git进行PR操作，在[solutions](https://github.com/west2-online-reserve/collection-ai/blob/main/task1/solutions.md)中填写你的仓库地址，这样便于你对你的实现进行更新
 
-相关教程
+相关教程：
 
-<https://github.com/west2-online-reserve/collection-ai> 里面有git使用和西二作业提交教程
+<https://github.com/west2-online-reserve/collection-ai> 里面有Git使用和西二作业提交教程
 
 [Git工作流和核心原理 | GitHub基本操作 | VS Code里使用Git和关联GitHub](https://www.bilibili.com/video/BV1r3411F7kn/?share_source=copy_web&vd_source=31019e44b62a4369d4eab7afea0fcfdf)
 
 ## Bonus
 
-完成CS61A的学习，完成相应的作业和lab（不要畏惧全英文的学习，你完全可以使用各类翻译软件帮助你学习(包括gpt)）,如果能啃下这门课那么你的编程水平将会超过绝大多数毕业生
+完成CS61A的学习，完成相应的作业和lab（不要畏惧全英文的学习，你完全可以使用各类翻译软件帮助你学习(包括GPT)），如果能啃下这门课那么你的编程水平将会超过绝大多数毕业生。
