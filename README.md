@@ -67,6 +67,10 @@ graph TD
 
 你还需要阅读 [Git 使用指南](./tasks(2026)/commit-task/git-study.md) 来了解 Git 的使用方法。
 
+此外，由于 AI 在不断发展，作业内容在不断变化，可能你做着做着作业内容就全变了。
+
+所以请时刻关注本仓库。
+
 ## 详细说明
 
 更多关于考核设计的思考，请参考 [ShaddockNH3 的博客](https://shaddocknh3.github.io/2025/10/19/3.w2-ai-think/)。

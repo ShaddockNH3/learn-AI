@@ -171,29 +171,6 @@ Windows 用户可以通过「控制面板」中的「程序和功能」来卸载
 
 > 在下载 VS Code 后，请下载 Python 插件以获得更好的 Python 支持
 
-### Python 虚拟环境的配置
-
-在未来的学习中，由于不同项目可能会依赖不同版本的库，因此建议使用虚拟环境来隔离项目的依赖，避免版本冲突。
-
-最简单的方法是使用 `venv`，这是 Python 内置的虚拟环境工具，可以通过以下命令创建和激活虚拟环境：
-
-```bash
-python -m venv myenv
-source myenv/bin/activate  # Linux/Mac
-myenv\Scripts\activate  # Windows
-```
-
-当然，更推荐使用 `uv`，这是一个更现代的 Python 虚拟环境管理工具，提供了更简洁的命令和更好的性能，最重要的是它支持并发安装依赖，极大地提升了安装速度。
-
-你也可以使用 [miniconda](https://docs.anaconda.com/miniconda/) 来管理环境，它轻量且功能强大。
-
-但是 Conda 会污染命令窗口，因此这里不作首选推荐。
-
-初学者一定要注意环境相关的问题，从一开始就养成好的习惯。
-
-> 关于虚拟环境，你现在可以在全局里跑。
->
-> 等你哪一天环境炸了，自然会来研究。
 
 ### 清华源
 
@@ -211,6 +188,30 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 这样配置后，你就可以直接使用 `pip install some-package` 来安装包了，速度会快很多。
+
+### Python 虚拟环境的配置
+
+在未来的学习中，由于不同项目可能会依赖不同版本的库，因此建议使用虚拟环境来隔离项目的依赖，避免版本冲突。
+
+最简单的方法是使用 `venv`，这是 Python 内置的虚拟环境工具，可以通过以下命令创建和激活虚拟环境：
+
+```bash
+python -m venv myenv
+source myenv/bin/activate  # Linux/Mac
+myenv\Scripts\activate  # Windows
+```
+
+当然，更推荐使用 [uv](https://uv.oaix.tech/)，这是一个更现代的 Python 虚拟环境管理工具，提供了更简洁的命令和更好的性能，最重要的是它支持并发安装依赖，极大地提升了安装速度。
+
+你也可以使用 [miniconda](https://docs.anaconda.com/miniconda/) 来管理环境，它轻量且功能强大。但是 Conda 会污染命令窗口，因此这里不作首选推荐。
+
+初学者一定要注意环境相关的问题，从一开始就养成好的习惯。
+
+如果你想对虚拟环境有进一步的了解，并且获得 step by step 的指导，可以阅读 [柠檬味氨水](https://github.com/weijianxian) 的博客 [uv 如何使用](https://blog.weijx.vip/p/uv%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8/)。
+
+> 关于虚拟环境，你现在可以在全局里跑。
+>
+> 等你哪一天环境炸了，自然会来研究。
 
 ### Markdown 基础
 

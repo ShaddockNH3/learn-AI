@@ -222,9 +222,9 @@ Stanford CS231n: Convolutional Neural Networks for Visual Recognition
   %autoreload 2
   ```
   
-  如果你没有特地去修改过 Colab 的 Python 运行版本可能会出现如下错误
+  如果你没有特地去修改过 Colab 的 Python 运行版本可能会出现如下错误：
   
-  ```
+  ```bash
   ModuleNotFoundError                       Traceback (most recent call last)
   …………
   ModuleNotFoundError: No module named 'cs231n'
@@ -242,9 +242,9 @@ Stanford CS231n: Convolutional Neural Networks for Visual Recognition
 
   不推荐使用 Linux 虚拟机，因为虚拟机的性能通常较差，可能无法满足深度学习的需求。
 
-  如果你执意要直接使用 Windows，可以参考[weijianxian CS231n 2025 spring 的环境配置](https://github.com/weijianxian/cs231n-25)，该方法使用 uv，也可以使用传统的 venv。
+  如果你执意要直接使用 Windows，可以参考 [柠檬味氨水 CS231n 2025 spring 的环境配置](https://github.com/weijianxian/cs231n-25)，该方法使用 uv，也可以使用传统的 venv。
 
-  如果你想采用 Windows + conda 的方式进行配置，可以参考[rechenz CS231n 2025 spring 的环境配置](https://github.com/rechenz/SetupLocal-for-cs231n-25)。
+  如果你想采用 Windows + conda 的方式进行配置，可以参考 [rechenz CS231n 2025 spring 的环境配置](https://github.com/rechenz/SetupLocal-for-cs231n-25)。
 
   个人推荐使用 WSL2，微软官方有详细的[安装教程](https://learn.microsoft.com/zh-cn/windows/wsl/install)。
 
