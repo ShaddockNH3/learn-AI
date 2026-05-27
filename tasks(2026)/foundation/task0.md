@@ -26,7 +26,7 @@
 
 在完成本次作业后，你应该注意并使用正确的浏览器，学会基本的文件管理，学会使用基本的截图工具，自由访问需要的网站等。
 
-### 作业 2 - Git 基础使用
+### 作业 2 - Git 基础使用与第一份 Markdown
 
 创建一个 GitHub 账号，并且创建一个名为 `learn-ai-username` 的仓库（其中 `username` 替换为你的 GitHub 用户名，或者你也可以自行命名）。
 
@@ -38,7 +38,34 @@
 - 代码块
 - 表格
 
-你的 Markdown 文档需要通过 Markdown Lint 的基本检查。
+你的 Markdown 文档需要通过 Markdown Lint 的基本检查，且需要至少保证如下 Apple 规范：
+
+- 中英文之间需要增加空格
+
+  例如：
+  
+  ```txt
+  √ 小红书 App 在苹果 iOS 应用商店将官方英文名称统一改写为全小写的 “rednote”。
+  x 小红书App在苹果iOS应用商店将官方英文名称统一改为全小写的“rednote”
+  ```
+
+- 中文与数字之间需要增加空格
+
+  例如：
+
+  ```txt
+  √ 可预约开启 6 小时后，苹果 iPhone 17 系列新品预约总量突破 200 万。
+  x 可预约开启6小时后，苹果 iPhone 17 系列新品预约总量突破200万。
+  ```
+
+- 数字与单位之间无需增加空格
+
+  例如：
+
+  ```txt
+  √ iPhone 17 标准版起步内存为 8GB，存储容量均从 256GB 起步。
+  x iPhone 17 标准版起步内存为 8 GB，存储容量均从 256 GB 起步。
+  ```
 
 ### 作业 3 - Hello World
 
@@ -137,9 +164,9 @@ Windows 用户可以通过「控制面板」中的「程序和功能」来卸载
 
 不限制大语言模型的使用，但你需要对大语言模型生成的内容做到足够了解，并且确保可以复现。
 
-如果有能力，建议使用 Gemini，ChatGPT 等，也请至少使用腾讯元宝（DeepSeek 版）、千问、智谱、DeepSeek。
+如果有能力，建议使用 Gemini，ChatGPT 等，也请至少使用、千问、智谱、DeepSeek。
 
-请不要使用豆包。
+请不要使用豆包、腾讯元宝（DeepSeek 版）
 
 ### 魔法工具
 
@@ -149,7 +176,7 @@ Windows 用户可以通过「控制面板」中的「程序和功能」来卸载
 
 ### 安装 Python
 
-访问 [Python 官方网站](https://www.python.org/downloads/) 下载并安装 Python 3 版本。
+访问 [Python 官方网站](https://www.python.org/downloads/) 下载并安装 Python 3.x 版本。
 
 下载的时候请选择 Add Python 3.x to PATH 选项以便在命令行中使用 Python。如果你没有做这一步，最简单的方法是卸载后重新下载。
 
@@ -169,7 +196,7 @@ Windows 用户可以通过「控制面板」中的「程序和功能」来卸载
 
 个人更建议使用 [VS Code](https://code.visualstudio.com/)（主要是 PyCharm 的 Jupyter Notebook 太过难用，建议初学者可以多使用 Jupyter 来编写程序）。
 
-> 在下载 VS Code 后，请下载 Python 插件以获得更好的 Python 支持
+> 在下载 VS Code 后，请下载 Python 插件以获得更好的 Python 支持。
 
 ### 清华源
 
