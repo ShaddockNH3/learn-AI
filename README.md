@@ -75,7 +75,11 @@ graph TD
 
 更多关于考核设计的思考，请参考 [ShaddockNH3 的博客](https://shaddocknh3.github.io/2025/10/19/3.w2-ai-think/)。
 
-这篇博客仍在优化中。
+这篇博客已经过时，待 ShaddockNH3 有时间再维护。
+
+## 致谢
+
+感谢 [ShaddockNH3](https://github.com/ShaddockNH3)，[JadeMelody](https://github.com/wjord2023)，[Tomori Nao](https://github.com/TomoriNaoiy)，[Longxi Zheng](https://github.com/REREREGO)，[Cai](https://github.com/ACaiCat)，[Schariac125](https://github.com/Schariac125)，[柠檬味氨水](https://github.com/weijianxian)，对 2026 / 2025 / 2024 版考核的贡献。
 
 ## 加入我们
 
