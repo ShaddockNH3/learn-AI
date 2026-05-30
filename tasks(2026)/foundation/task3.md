@@ -20,29 +20,15 @@ AI 不是万能的。
 
 在这个 AI 发展逐渐趋向克苏鲁的时代，你需要保证自己的主体地位，切记不可主体客体化、客体主体化。
 
+> 在这个 Task，你可能什么都学不到，不过这是不重要的，这个 Task 的作用是科普。
+
 ## 学习内容
 
-- AI 边界探索与幻觉测试
-  - 深度思考模型（如 DeepSeek R1）的推理逻辑分析。
-  - AI 在常识、物理规律与空间逻辑上的认知缺陷。
-
-- AI 概率机制的直观体验
-  - 大模型的 Token（分词）机制与概率接龙原理。
-  - 零样本分类（Zero-shot）、掩码填空（Masked Language Modeling）的微型代码实现。
-  - 系统提示词（System Prompt）对模型表现的决定性影响。
-
-- Vibe Coding（纯提示词编程）实战
-  - 使用自然语言从零构建前后端分离的 Web 系统（FastAPI + Vue3）。
-  - RESTful API 规范与逻辑删除机制的实现与验证。
-  - 应对 AI 上下文丢失、前后代码矛盾时的工程化处理策略。
+你什么都学不到，或者说你想学的话，你能学到很多。
 
 ## 学习要求
 
-对于作业 1，你不需要任何编程知识。你应当能通过不同问题的测试，总结出当前大语言模型擅长什么（如代码生成、角色扮演），又不擅长什么（如空间推理、简单的字数统计），并深刻理解永远不要盲目信任 AI 地输出。
-
-对于作业 2，你需要复制并运行提供的 Colab 脚本，你应当能直观理解 AI 是如何将文字分类和生成的。你不需要去弄懂 transformers 库底层的源码，但你必须明白：在你的代码里加入简单的模型调用，就能瞬间让你的应用拥有判断情绪或理解语义的能力。
-
-对于作业 3，你不需要手写业务代码，但这绝不是一次轻松的作业（如果你使用 AI 的方式不对的话）。当 AI 把数据库搞乱、或者前后端接口对不上时，你要能发现问题，并通过调整 Prompt 让它修复。
+对于这个 Task，你可以自由选择完成至什么程度，本质科普。
 
 ## 作业
 
@@ -132,7 +118,7 @@ from transformers import pipeline
 unmasker = pipeline("fill-mask", model="bert-base-chinese")
 
 # [MASK] 是留给 AI 填空的位置
-text = "西二AI实验室的学长今天穿了一件[MASK]色的衣服，看起来非常帅气。"
+text = "西二实验室的学长今天穿了一件[MASK]色的衣服，看起来非常帅气。"
 
 print("AI 正在思考 [MASK] 处最可能填写的字...\n")
 results = unmasker(text)
@@ -180,7 +166,25 @@ print("AI 回复:", output[0]['generated_text'][-1]['content'])
 2. 动手修改：请发挥你的脑洞，修改 `messages` 列表中的 `"system"` content（把它变成一个极度自恋的霸总、一个只能用 JSON 格式输出数据的机器，或者一个绝望的打工人等），然后修改 `"user"` 的提问
 3. 将你修改后的 `messages` 代码和 AI 最终生成的有趣回复记录在作业文档中，并思考：系统提示词在未来的 AI 应用开发中扮演着什么角色
 
-### 作业 3 - Vibe Coding
+### 作业 3 - 雪人三项与女娲 skill
+
+[Schariac125](https://github.com/Schariac125) 喜欢巧乐兹，但她更喜欢一项运动——
+
+打 12h pjsk，三口吃完巧乐兹，急头白脸跑 10 公里后再灌下去一瓶冰镇雪碧，最后和自己的棉花娃娃来张自拍。
+
+她将之称为 snowman triple pjsk pro plus ultra max thinking。
+
+尽管她的好朋友 [CuteBread](https://github.com/CutebreadCat) 再三劝阻不要再做这么危险的事情了，但她仍旧热爱。
+
+有一天 Schariac125 病倒了，CuteBread 心急如焚，她可不想失去这么好的朋友！
+
+恰巧 [同事.skill](https://github.com/titanwings/colleague-skill) 爆火全网，[女娲.skill](https://github.com/alchaincyf/nuwa-skill) 又提供一个很简单的方式创建人格。
+
+你的任务就是帮 CuteBread 蒸馏 Schariac125。
+
+> 只是剧情需要而已，你可以自由选择蒸馏任何人。
+
+### 作业 4 - Vibe Coding
 
 文科生 72 小时杀入 Github 全球榜：我没写一行代码，但指挥了一支 AI 军队。
 
@@ -234,6 +238,9 @@ print("AI 回复:", output[0]['generated_text'][-1]['content'])
 3. AI 写出来的东西可读性如何，你认为这些可以长期维护吗？
 4. 基于问题 3，对比你自己使用 AI 写出来的东西，阅读 foundation 文件夹下 codex 5.5 使用一次提示词输入，花费 10min 16s 跑出来的 [Memo Codex 5.5](./Memo-codex5.5)，你认为两者谁的可维护性更好
 5. 你可以跟着 AI 给出的 README 部署一遍你的项目吗
+6. 你可以使用能力一般的 AI API 完成这个任务吗
+
+> 这里给出一点提示，vibe coding 分为两种形式：许愿式和命令式。许愿式，能力完全依据模型本身能力强度；命令式则非常考验你的能力，你需要完全了解 AI 在做什么，然后在此基础上给出提示词。
 
 ## 推荐教程与参考资料
 
