@@ -8,8 +8,8 @@
 
 ## 作业提交方式
 
-1. 你需要学习 GitHub 的使用，创建一个你自己的仓库用来存放你的代码实现
-2. 接着你需要学习如何使用 Git 进行 PR 操作，在 [solutions](https://github.com/west2-online-reserve/collection-ai) 仓库中提交
+1. 你需要学习 GitHub 的使用，创建一个你自己的仓库用来存放你的代码实现（代码审查使用的是该仓库）
+2. 接着你需要学习如何使用 Git 进行 PR 操作，在 [solutions](https://github.com/west2-online-reserve/collection-ai) 仓库中提交（仅作为留档）
 3. 对于每一份作业，你需要按照 Git 推荐的提交方式，提交最小可运行子集
 
 ## 答辩形式

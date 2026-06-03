@@ -1,4 +1,4 @@
-﻿# Memo Codex 5.5 - TODO LIST
+# Memo Codex 5.5 - TODO LIST
 
 这是作业 3 的 Vibe Coding 成品：一个使用 FastAPI + SQLite + Vue3 实现的 TODO LIST。项目所有文件都在当前 `Memo-Codex5.5` 文件夹内，运行时只会在本文件夹生成本地虚拟环境和 `todo.sqlite3` 数据库，不污染全局环境。
 
@@ -70,9 +70,9 @@ uvicorn backend.main:app --reload
 
 打开浏览器访问：
 
-- 前端页面：http://127.0.0.1:8000/
-- Swagger 接口文档：http://127.0.0.1:8000/docs
-- ReDoc 接口文档：http://127.0.0.1:8000/redoc
+- 前端页面：<http://127.0.0.1:8000/>
+- Swagger 接口文档：<http://127.0.0.1:8000/docs>
+- ReDoc 接口文档：<http://127.0.0.1:8000/redoc>
 
 ## API 测试脚本
 

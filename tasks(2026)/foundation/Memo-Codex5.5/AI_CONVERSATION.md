@@ -1,5 +1,6 @@
-﻿# AI Conversation - Memo Codex 5.5
+# AI Conversation - Memo Codex 5.5
 
+> [!TIP]
 > 本文件用于满足作业中“附带你与 AI 的对话链接或导出完整的对话 Markdown 文件”的要求。当前环境是 Codex CLI Agent，本文件记录本次生成项目时的主要对话与执行过程。若提交平台支持完整会话导出，建议同时附上完整导出文件。
 
 ## 用户提示词

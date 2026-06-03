@@ -1,4 +1,4 @@
-﻿# west2-online AI 考核指南
+# west2-online AI 考核指南
 
 欢迎来到西二在线工作室人工智能方向的考核指南。本指南旨在为初学者提供一条循序渐进的人工智能学习路线，帮助你系统性地掌握人工智能的核心知识与技能。
 
@@ -10,6 +10,7 @@
 
 所有考核相关文档均按学习目的 - 学习内容 - 学习要求（可能没有） - 作业 - 推荐教程与参考资料的目录结构编写。
 
+> [!TIP]
 > 从往年的经验来看，无人在意“推荐教程与参考资料”这部分内容，因此将其移到作业之后。但我希望你能认真看完这部分内容，因为这部分不只是推荐教程，还有更多有用的信息。
 
 除此之外，我们还会提供各种补充资料。这部分并非考核内容，但如果你想学得更好，可以参考这些资料。
@@ -53,7 +54,7 @@ graph TD
 
 ## 如何开始
 
-请进入 [tasks(2026)](./tasks(2026)) 文件夹，从 [Foundation](./tasks(2026)/foundation) 中的 [Task 0（task0.md）](./tasks(2026)/foundation/task0.md) 开始学习。
+请进入 [tasks(2026)](./tasks(2026)) 文件夹，从 [Foundation](./tasks(2026)/foundation) 中的 [Task 0](./tasks(2026)/foundation/task0.md) 开始学习。
 
 我们希望学习方式是“文档引导 + 个人自学”。我们会告诉你应当如何快速上手，但你想要学好、学懂，除了我们的引导外，还需要主动进行个人提升。
 
@@ -76,6 +77,30 @@ graph TD
 更多关于考核设计的思考，请参考 [ShaddockNH3 的博客](https://shaddocknh3.github.io/2025/10/19/3.w2-ai-think/)。
 
 这篇博客已经过时，待 ShaddockNH3 有时间再维护。
+
+## 维护指南
+
+维护者在修改文档前，请先阅读 [Markdown 维护规范](./docs/markdown-style-guide.md)。
+
+提交前至少运行一次 Markdown 检查：
+
+```powershell
+.\scripts\check-markdown.ps1
+```
+
+Linux / macOS 用户可以运行：
+
+```shell
+sh scripts/check-markdown.sh
+```
+
+也可以直接使用跨平台 Node.js 入口：
+
+```shell
+node scripts/check-markdown.mjs
+```
+
+新增或修改任务文档时，请优先保持“学习目的 - 学习内容 - 作业 - 推荐教程与参考资料”的结构，并遵守中英文空格、中文数字空格、数字单位和中文标点规范。
 
 ## 致谢
 
