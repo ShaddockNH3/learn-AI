@@ -56,9 +56,11 @@ AI 不是万能的。
 
 ### 作业 2 - 简单 AI 原理及任务
 
-现代人工智能的初级灵感来源于对人脑的近似复现，例如各种神经网络，但后来的研究者发现，模拟人脑这条路太难而且太低效，转而开始发问“什么样的数学方法可以让机器从数据中拟合出复杂函数？”。而最后的答案是：线性代数 + 微积分 + 概率论 + 堆算力。也就是从那一刻开始，人工智能逐渐和神经科学渐行渐远，和数学越走越近。
+现代人工智能的初级灵感来源于对人脑的近似复现，例如各种神经网络，但后来的研究者发现，模拟人脑这条路太难而且太低效，转而开始发问“什么样的数学方法可以让机器从数据中拟合出复杂函数？”。
 
-> "The wings of a 747 are inspired by birds, but a 747 doesn't flap its wings."
+而最后的答案是：线性代数 + 微积分 + 概率论 + 堆算力。也就是从那一刻开始，人工智能逐渐和神经科学渐行渐远，和数学越走越近。
+
+"The wings of a 747 are inspired by birds, but a 747 doesn't flap its wings."
 
 现代 LLM 依赖于一个叫做 Transformer 的架构，这个架构决定了我们现在使用的大模型的本质是一台非常高级的概率预测机器，它通过学习海量的数据找到规律，最后依赖于它学到的规律去做文字接龙和概率预测。因此，模型不懂“喜怒哀乐”，它只懂，下一个词是 xx 的概率最大。
 
@@ -120,7 +122,7 @@ from transformers import pipeline
 unmasker = pipeline("fill-mask", model="bert-base-chinese")
 
 # [MASK] 是留给 AI 填空的位置
-text = "西二实验室的学长今天穿了一件[MASK]色的衣服，看起来非常帅气。"
+text = "西二实验室的学长今天穿了一件 [MASK] 色的衣服，看起来非常帅气。"
 
 print("AI 正在思考 [MASK] 处最可能填写的字...\n")
 results = unmasker(text)
@@ -170,7 +172,7 @@ print("AI 回复:", output[0]['generated_text'][-1]['content'])
 
 ### 作业 3 - 雪人三项与女娲 skill
 
-[Schariac125](https://github.com/Schariac125) 喜欢巧乐兹，但她更喜欢一项运动——
+[Schariac125](https://github.com/Schariac125) 喜欢巧乐兹，但她更喜欢一项运动 ——
 
 打 12h pjsk，三口吃完巧乐兹，急头白脸跑 10 公里后再灌下去一瓶冰镇雪碧，最后和自己的棉花娃娃来张自拍。
 
@@ -239,7 +241,7 @@ print("AI 回复:", output[0]['generated_text'][-1]['content'])
 1. 你使用的 AI 是什么？（例如 DeepSeek、Gemini 等），使用的 AI 是什么形式（例如 WEB 对话、使用 API、Agent），这些形式再往下细分之下有什么区别（以 Agent 举例，深度绑定 VS Code 的 Github Copilot 与基于 cli 的 Codex 有什么区别）
 2. 在整个前后端交互开发的过程中，AI 是否出现了幻觉（比如胡编乱造方法、前后代码矛盾、遇到复杂 Bug 绕弯子）？如果有，你是如何通过修改提示词来引导它修复的
 3. AI 写出来的东西可读性如何，你认为这些可以长期维护吗？
-4. 基于问题 3，对比你自己使用 AI 写出来的东西，阅读 foundation 文件夹下 codex 5.5 使用一次提示词输入，花费 10min 16s 跑出来的 [Memo Codex 5.5](./Memo-codex5.5)，你认为两者谁的可维护性更好
+4. 基于问题 3，对比你自己使用 AI 写出来的东西，阅读 foundation 文件夹下 codex 5.5 使用一次提示词输入，花费 10min 16s 跑出来的 [Memo Codex 5.5](./Memo-Codex5.5)，你认为两者谁的可维护性更好
 5. 你可以跟着 AI 给出的 README 部署一遍你的项目吗
 6. 你可以使用能力一般的 AI API 完成这个任务吗
 
