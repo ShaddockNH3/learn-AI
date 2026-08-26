@@ -4,7 +4,7 @@
 
 考核需要完成 Foundation 和分流阶段的作业，完成后需要提交到 GitHub 上。
 
-如果你有一定的基础，那么可以跳过 Foundation 的 Task 0、1、3，完成 Foundation 的 Task 2 和分流阶段的作业。
+如果你有一定的基础，那么可以跳过 Foundation 的 Task 0、1、3（需面谈），完成 Foundation 的 Task 2 和分流阶段的作业。
 
 ## 作业提交方式
 
