@@ -28,6 +28,8 @@ Python 也有前端框架（如 Streamlit），适合快速搭建数据展示和
 
 需要注意，对于作业 2 - 4，**你必须使用 typehint（如果给的框架没有，你需要自行添加），并通过 pylance 的检查**。
 
+此外，如果你觉得作业 1，作业 2 - 4 上手困难，你可以回到 Task 0 完成 bonus 以熟悉 python 语法。
+
 ### 文档 1
 
 整理一份笔记（使用 Markdown 或 Jupyter Notebook），内容至少包括以下 Python 语法和编程技巧：
