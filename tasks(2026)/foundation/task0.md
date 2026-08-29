@@ -356,8 +356,8 @@ python your_script.py
 
 推荐使用 black formatter(vs code) <https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter>
 
-默认快捷键 `Alt+Shift+F` 进行代码格式化，推荐打开 `保存时自动格式化`。
+链接：<vscode://settings/editor.formatOnSave>
 
 Pycharm 建议直接使用内置的代码格式化功能，其他编辑器可使用上面推荐的 ruff 进行代码格式化。
 
-链接：<vscode://settings/editor.formatOnSave>
+默认快捷键 `Alt+Shift+F` 进行代码格式化，推荐打开 `保存时自动格式化`
