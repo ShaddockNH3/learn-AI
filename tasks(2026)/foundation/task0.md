@@ -318,6 +318,20 @@ Markdown 语法并不复杂，建议初学者只需掌握基本语法即可，�
 
 ### 代码风格
 
+#### Pylance 与其平替工具
+
+现代编辑器提供了多种代码辅助工具来提升开发效率，其中 VS Code 中的 Pylance 就是一个典型代表。
+
+• VS Code 用户：安装 Python 扩展时会自动附带 Pylance，无需额外安装或配置，开箱即用。
+
+• PyCharm 用户：PyCharm 已内置了与 Pylance 功能相当的代码智能支持，同样开箱即用，无需额外插件。
+
+• 其他编辑器用户（如 Cursor 等）：推荐使用 basedpyright + Ruff 的组合进行平替，兼顾类型检查与代码质量。
+
+[basedpyright](https://github.com/DetachHead/basedpyright)
+
+[ruff](https://github.com/astral-sh/ruff)
+
 #### PEP 8 规范
 
 [PEP 8 -- Style Guide for Python Code](https://peps.python.org/pep-0008/)
@@ -342,6 +356,8 @@ python your_script.py
 
 推荐使用 black formatter(vs code) <https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter>
 
-默认快捷键 `Alt+Shift+F` 进行代码格式化，推荐打开 `保存时自动格式化`
-
 链接：<vscode://settings/editor.formatOnSave>
+
+Pycharm 建议直接使用内置的代码格式化功能，其他编辑器可使用上面推荐的 ruff 进行代码格式化。
+
+默认快捷键 `Alt+Shift+F` 进行代码格式化，推荐打开 `保存时自动格式化`
