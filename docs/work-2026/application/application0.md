@@ -1,4 +1,4 @@
-# Application 0 - Tiktok-Demo
+# Application 0 - Before Agent
 
 > [!NOTE]
 > 预计耗时：30 天

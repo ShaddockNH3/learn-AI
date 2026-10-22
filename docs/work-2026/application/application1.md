@@ -1,17 +1,17 @@
-﻿# Application 1 - AI 应用认知与简单 API 调用
+﻿# Application 1 - 底层认知、简单 API 调用与玩具级 AI 应用
 
 > [!NOTE]
-> 预计耗时：30 天
+> 预计耗时：45 天
 
 ## 学习目的
 
 首先需要说明，这里的应用指的是极为顶层的 AI 应用开发，几乎不涉及底层算法实现。手搓 CNN 训练图片识别模型这类工作不属于应用，而属于算法实现。
 
-因此应用指的是工程化地使用 AI，把 AI 作为业务链条中的一环。比如本次作业 3，是调用大语言模型完成情感分析任务，而不是传统地训练一个情感分析器。
+因此应用指的是工程化地使用 AI，把 AI 作为业务链条中的一环。比如「橘雪莉妙妙屋」这个作业，是调用大语言模型完成情感分析任务，而不是传统地训练一个情感分析器。
 
 打一个通俗易懂的链条：
 
-数学 -> Numpy 手算反向传播 -> Pytorch 自动推导反向传播 -> Transformer 库（Hugging Face 集成 Pytorch / TensorFlow，屏蔽底层细节，抽象出 Pipeline 的概念） -> Langchain / Dify 模块化集成（轻松调用工具） -> LLM API 屏蔽所有底层细节 -> AI 应用（调用 API 完成任务、聊天机器人、Agent 调用 API）-> harness
+数学 -> Infra 算子 -> Pytorch 自动推导反向传播 -> Transformer 库（Hugging Face 集成 Pytorch / TensorFlow，屏蔽底层细节，抽象出 Pipeline 的概念） -> Langchain / Dify 模块化集成（轻松调用工具） -> LLM API 屏蔽所有底层细节 -> AI 应用（调用 API 完成任务、聊天机器人、Agent 调用 API）-> Harness
 
 Application 的目的是要你站在最顶层的视角向下看，并且向下只最多接触到 Hugging Face。
 
@@ -37,13 +37,17 @@ $\color{red}{\text{开始之前，请确保你拥有充足的前端 / 后端知�
 
 ## 学习内容
 
-- 简单底层理解
-- 机器学习与深度学习
+- 底层认知：简单底层理解、机器学习与深度学习
 - 简单 API 调用
+- 玩具级 AI 应用（rembg、YOLO、Whisper）
 
-## 作业
+## 作业 - 底层认知
 
-我们鼓励你在 Application 方向的相关作业中使用 MacOS / Linux 系统进行学习。但如果硬件条件实在有限，Windows 系统的 WSL2 依旧是一个不错的选择，相关配置教程可以参考[安装教程](https://learn.microsoft.com/zh-cn/windows/wsl/install)。
+虽然作业总标题叫底层认知，但我们更希望你去先完成 Research 方向的作业，然后再回过头来继续向下看。
+
+一个做 AI 的人可以理解 AI 底层的架构，至少是最基本的。
+
+对于 AI 应用，我们更希望的路线是学习完 AI 底层，学习一份后端 / 前端技术，然后再来学习 Agent，乃至更进阶的 AI 应用算法、Infra 等，这也是我们设置 Application0 的原因。
 
 ### 文档 1
 
@@ -142,7 +146,11 @@ Hugging Face 是一个友好的开源社区，在上面你可以找到绝大多�
 
 在完成上述任务后，你应该写一份文档来阐述你的理解，并且做到可以完成类似 Foundation 3 作业 2 中的代码即可。
 
-### 作业 3 - 橘雪莉妙妙屋
+## 作业 - 简单 API 调用
+
+我们鼓励你在 Application 方向的相关作业中使用 MacOS / Linux 系统进行学习。但如果硬件条件实在有限，Windows 系统的 WSL2 依旧是一个不错的选择，相关配置教程可以参考[安装教程](https://learn.microsoft.com/zh-cn/windows/wsl/install)。
+
+### 作业 1 - 橘雪莉妙妙屋
 
 橘雪莉是《魔法少女的魔女审判》中的登场角色。自称侦探的少女，笑容满面，性格奔放，对有意思的事情会毫不犹豫扑上去。
 
@@ -160,7 +168,7 @@ Hugging Face 是一个友好的开源社区，在上面你可以找到绝大多�
 
 需要注意的是，GLM 的输出只能是你定义的词汇之一。如果输出了其他内容，说明你的提示词设计不合理，需要进行修改。
 
-#### 作业要求 - 作业 3
+#### 作业要求 - 作业 1
 
 - 使用具有视觉能力的模型完成文本和表情包的分析。
 - 设计合理的提示词，确保模型输出符合预期的情感标签。
@@ -168,7 +176,7 @@ Hugging Face 是一个友好的开源社区，在上面你可以找到绝大多�
 - 务必使用 .gitignore 文件保护你的密钥，避免泄露。
 - 使用 uv 管理项目依赖和运行环境。
 
-### 作业 4 - 自动调课
+### 作业 2 - 自动调课
 
 众所周知，福大放假会发调课通知，但课表却从不跟着改。每次一调休，课表上的安排全乱了，非常糟糕。
 
@@ -191,14 +199,146 @@ Hugging Face 是一个友好的开源社区，在上面你可以找到绝大多�
 ]
 ```
 
-#### 参考资料 - 作业 4
+#### 参考资料 - 作业 2
 
 [宝硕博客：LLM 工程化在福 uu 中的落地实践 —— 假期调课的智能解析](https://blog.baoshuo.ren/post/fzuhelper-llm-as-function/)
 
-#### 作业要求 - 作业 4
+#### 作业要求 - 作业 2
 
 - 设计合理的提示词，确保模型能够正确解析调课通知。
 - 使用 openai 模块调用 API，选择合适的模型。
 - 必须使用 uv 管理项目依赖和运行环境。
 - 校验模型输出的调课规则是否符合预期格式。
 - 使用在之前任务爬取的教务通知验证你的解析器，确保它能够正确解析调课通知。
+
+### 作业 3 - JSON 生成与解析器
+
+## 作业 - 玩具级 AI 应用
+
+我们还是需要了解一些其他的工程化应用，例如一些玩具。
+
+这里需要注意，玩具的是**我们写出来的东西**，而不是我们**调用的工具**。
+
+### 作业 1 - 证件照生成器
+
+下北泽的 Live House 要办一场联合演出，伊地知虹夏作为 結束バンド 的队长，负责把四个人的报名材料交上去。
+
+表格的最后一栏写着：请附上演出者本人近照，白底，一寸。
+
+虹夏本以为这是最省事的一栏，直到四个人交上来的东西摊在了桌上：
+
+- 后藤一里交来一张用被子蒙住头、只露出一只眼睛的自拍，理由是「照相馆里有人看着我，我会死的」；
+- 山田凉交来一张在草地上吃草的照片，说「这张拍出了我的灵魂」；
+- 喜多郁代交来一张光线完美、背景是涩谷十字路口的自拍；
+- 而虹夏自己那张，是四个人里唯一一张能直接用的。
+
+报名截止是明天下午五点，最近的照相馆六点就关门，而乐队的经费上周被凉拿去买了一把新贝斯。
+
+「那就不去照相馆了。」虹夏把四张照片排成一排，「把人抠出来，换底色，裁成一寸，就这么简单。」
+
+好消息是，抠图这件事早就不需要自己做了。`rembg` 已经把 U2Net / ISNet 这类分割模型封装成了命令行工具和 Python 接口，一行调用即可。
+
+你需要写一个证件照生成器，把这一桌照片变成能交上去的材料：
+
+1. 输入一张人像照片，自动抠出人像并合成到指定底色（白 / 蓝 / 红）上
+2. 输出标准规格：一寸（295 × 413 像素）、二寸（413 × 579 像素），尺寸与底色都能通过命令行参数指定
+3. 支持批量：传入一个目录，输出到另一个目录，保持文件名，结束时打印一份处理报告
+4. 人像需要居中并留出合理的头部空间，不能简单地把原图缩放后贴上去
+5. （Bonus）用 Gradio / Streamlit 包一层界面，上传即出图
+6. （Bonus）人脸检测自动对齐，保证眼睛水平、头部居中（可以使用 `mediapipe` 等已经封装好的工具）
+
+> [!TIP]
+> 测试的时候别只拿一张精修过的证件照测试。
+>
+> 思考：如果四个人交上来的照片尺寸、朝向、人脸比例全都不一样，你的代码要怎样才能不做任何手动调整就把它们全部处理掉。
+
+#### 作业要求 - 证件照生成器
+
+- 使用 `rembg` 等已经封装好的抠图工具，不要自己训练分割模型
+- 抠图结果不能有明显白边、毛边，发丝边缘也要可接受
+- 尺寸、底色、留白等参数必须可配置，不能硬编码在代码里
+- 批量模式下，单张图片失败不能中断整个任务，需要跳过并记录
+- 提供清晰的命令行帮助与 README
+- 只处理自己或已获得授权的照片，禁止上传到第三方在线服务
+
+#### 参考资料 - 证件照生成器
+
+1. [rembg](https://github.com/danielgatis/rembg)
+2. [rembg - PyPI](https://pypi.org/project/rembg/)
+3. [Pillow 文档](https://pillow.readthedocs.io/)
+4. [Gradio 文档](https://www.gradio.app/docs)
+5. [MediaPipe](https://github.com/google-ai-edge/mediapipe)
+
+### 作业 2 - YOLO 的基本使用
+
+[ShaddockNH3](https://github.com/ShaddockNH3) 是忠实的 PVZ 玩家，不过她的技术实在太差了。
+
+直到某天她碰到 [柠檬味氨水](https://github.com/weijianxian) 对着某款枪战游戏框框画画。
+
+“鬼！”
+
+于是她找到了技术力差的解决方案。
+
+YOLO 是计算机视觉领域最具代表性的单阶段目标检测算法系列，基于它的工具（如 Ultralytics）提供了一个简单的 API 来识别特定的物体。
+
+本次任务并不会太难，目的是介绍 AI 应用领域并非只有 LLM，在视觉领域也有广泛的应用。
+
+你需要借助 YOLO 实现一个自拟的项目，最终效果是自动化完成某些单机游戏的自动化操作。
+
+如果你没有 idea，你可以做一个自动通关 PVZ 1-10 关的脚本。
+
+#### 作业要求 - YOLO
+
+- 请不要只是做一个识别 YOLO 模型中已经包含的模型的 demo。
+
+#### 参考资料 - YOLO
+
+1. [YOLO 快速使用](https://docs.ultralytics.com/zh)
+2. [Ultralytics Python 用法](https://docs.ultralytics.com/zh/usage/python/)
+3. [Ultralytics 训练自定义数据集](https://docs.ultralytics.com/zh/modes/train/)
+4. [Ultralytics 预测与推理参数](https://docs.ultralytics.com/zh/modes/predict/)
+5. [X-AnyLabeling](https://github.com/CVHub520/X-AnyLabeling)（标注工具，也可以使用 LabelImg 或 Roboflow）
+6. [mss](https://github.com/BoboTiG/python-mss)（屏幕截图）
+7. [pynput](https://github.com/moses-palmer/pynput)（模拟键盘鼠标）
+8. [PVZ 原版下载](http://jspvz.com/ResDownload/1_PC_E.htm#v1.0.0.1051)
+9. [PVZ 修改器](http://jspvz.com/ResDownload/Modifier.htm#v1.9)
+
+### 作业 3 - 实时转写与总结
+
+[blueinsane0727](https://github.com/blueinsane0727) 终于找到了秋招前的实习，但比起上班而言她更喜欢摸鱼。
+
+可惜好景不长，随着 DDL 的到来，她再也不能像以前那样窝在角落里摸鱼了，每天都得花上大量的时间开会讨论方案。
+
+会议的内容枯燥且乏味，于是她委托你帮忙做一个会议音频转写工具，需要具备一键总结功能，这样她就能花时间在崩铁上，被领导点到的时候看一眼总结就好了。
+
+不过有的时候领导会问的很深，所以原始文本也需要留着备用！
+
+Whisper 是一个端到端的 Transformer 解码器 - 编码器模型，是目前业界应用最广泛的语音转写方案之一。支持多语言识别与翻译，并且提供了多种模型尺寸供选择使用。
+
+在这项作业中，你需要使用 OpenAI 的语音识别模型 Whisper 实现一个会议实时转写与总结。
+
+最终的效果是呈现原始文本、实时总结以及思维导图三块内容。
+
+这里推荐使用尺寸为 small 的模型，其 244M 的参数量足以支持你完成本次作业，并且能够在个人 PC 上流畅运行。
+
+#### 参考资料 - Whisper
+
+1. [Whisper 官方文档](https://openai.com/zh-Hans-CN/index/whisper/)
+2. [openai/whisper](https://github.com/openai/whisper)（官方仓库，模型尺寸与参数说明都在这里）
+3. [faster-whisper](https://github.com/SYSTRAN/faster-whisper)（推理加速，做实时转写建议使用）
+4. [whisper.cpp](https://github.com/ggerganov/whisper.cpp)（CPU / 端侧推理）
+5. [sounddevice](https://python-sounddevice.readthedocs.io/)（麦克风 / 系统声音采集）
+6. [Silero VAD](https://github.com/snakers4/silero-vad)（判断有没有人在说话，避免对静音片段做转写）
+7. [noisereduce](https://github.com/timsainb/noisereduce)（降噪）
+8. [ffmpeg](https://ffmpeg.org/documentation.html)、[pydub](https://github.com/jiaaro/pydub)（音频切分与格式转换）
+9. [Mermaid 文档](https://mermaid.js.org/intro/)（思维导图渲染）
+
+#### 作业要求 - Whisper
+
+- 你可以自己爬取一个长视频作为使用样本完成本次作业，也可以使用群聊里的答辩会议记录视频。
+- 你需要学会自己配置一个 chat model 用于总结
+- 如果一开始觉得无从下手，可以先实现一个朴素的非实时会议后总结，但最后提交的作业需要是实时总结版本的。
+- 前处理：会议存在杂音，只是过一遍 whisper 的模型可能会引入大量无关声音。你需要为你的实现配置降噪处理，可以采用训练降噪模型的方式。
+- 后处理：whisper 生成的内容存在错字漏字，你需要解决这个问题
+- 增加思维导图功能，思维导图可以采用 mermaid 呈现。
+- 最终呈现出来的东西可以以任意形式保存，但是必须需要渲染。
