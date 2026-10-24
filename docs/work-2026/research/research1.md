@@ -30,6 +30,8 @@ $\color{red}{\text{但是这是进实验室最基本的要求，大家都是这�
 
 从经典机器学习到深度学习。
 
+- 逻辑回归
+- 决策树
 - KNN
 - SVM
 - Softmax Classifier
@@ -40,6 +42,10 @@ $\color{red}{\text{但是这是进实验室最基本的要求，大家都是这�
 - GAN
 - Transformer
 - LSTM
+- 自监督学习
+- DDPM
+- CLIP
+- DINO
 
 ## 学习要求
 
@@ -49,26 +55,51 @@ $\color{red}{\text{但是这是进实验室最基本的要求，大家都是这�
 
 后两者已经在前几轮涉及；若前两者在学校课程中尚未开设（例如大一同学通常会在高数下学期接触偏导数），可以参考下一节的推荐教程。
 
-对于与深度学习思想差异较大的传统机器学习算法，只需要写一篇文档描述其原理和使用场景即可，无需从零实现。
+对于与深度学习思想差异较大的传统机器学习算法，只需要理解其原理和使用场景即可，无需从零实现。
 
 ## 作业
 
-对于本次作业，你需要完成 5 篇文档，作业 1 - 3。
+对于本次作业，我们希望你能把每一部分整理成文档，方便自己梳理思路。
 
-### 文档 1 - 生成式 AI 的训练流程
+不过按照[作业提交说明](../../commit/work-commit.md)。答辩时至少要做一份 PPT（推荐）或者写一份文档，讲 10 - 15 分钟，文档并不是硬性要求。
 
-阅读[李宏毅生成式人工智能教程课本](https://github.com/datawhalechina/leegenai-tutorial/releases)，整理相关内容，并以文档形式讲述大语言模型的整个训练流程。
+需要注意的是，公开课的内容并不完善，你需要额外阅读我们提供的其他资料来掌握所有需要学习的内容，最后做 PPT 的时候可以按照“学习内容”来校验自己有没有完整的掌握所有的知识点。
+
+### 作业 0 - 生成式 AI 的训练流程
+
+- LLM 基础认知
+
+阅读[李宏毅生成式人工智能教程课本](https://github.com/datawhalechina/leegenai-tutorial/releases)，整理相关内容，并以文档形式讲述大语言模型的整个训练流程。配套视频是[李宏毅 2024 春季课程](https://www.bilibili.com/video/BV1BJ4m1e7g8/)。
+
+需要弄清楚的是：预训练、监督微调、人类反馈强化学习三个阶段各自在做什么，三个阶段的数据来源、训练目标与最终产出又有什么不同。
 
 > [!NOTE]
-> 本文档**不要求精确的数学公式和理论表达**，只需用你自己的话，简要描述生成式 AI 的三个训练阶段：
+> 本作业**不要求精确的数学公式和理论表达**，只需用你自己的话，简要描述生成式 AI 的三个训练阶段：
 >
 > 1. 自监督学习（Pre-training）
 > 2. 监督式学习（Supervised Fine-tuning）
 > 3. 人类反馈强化学习（RLHF）
 
-### 文档 2 - 传统机器学习算法之间的区别
+### 作业 1 - 传统机器学习与神经网络
 
-介绍 K-Nearest Neighbor（k-NN）、Support Vector Machine（SVM，支持向量机）、Softmax Classifier（Softmax 分类器）、XGBoost、Random Forest（随机森林）这五种机器学习算法的原理和使用场景，并指出这些算法与神经网络的区别。
+- 逻辑回归、决策树、KNN、SVM、Softmax、XGBoost、Random Forest
+- 理解逻辑回归、k-NN、SVM、Softmax 的决策方式，以及随机森林与 XGBoost 的集成思想，并做**区分**
+- 理解传统机器学习与神经网络在利用特征上的区别
+- 完成 [CS231n Assignment 1](https://cs231n.github.io/assignments2026/assignment1/) 的五道题：k-NN 分类器、Softmax 分类器、两层神经网络、图像特征表示、全连接网络训练
+
+逻辑回归可以看作单个神经元的原型，先看 [scikit-learn 的线性模型](https://scikit-learn.org/stable/modules/linear_model.html) 里对应的部分，理解 sigmoid 和交叉熵是怎么来的。
+
+决策树是随机森林与 XGBoost 的地基，[scikit-learn 的决策树](https://scikit-learn.org/stable/modules/tree.html) 一节讲得比较直观，分裂准则和剪枝都有覆盖。
+
+随机森林与 XGBoost 只需要了解原理并会用 [scikit-learn 的集成方法](https://scikit-learn.org/stable/modules/ensemble.html)，不必从零实现。
+
+然后，阅读 [CS231n 图像分类](https://cs231n.github.io/classification/)与[线性分类](https://cs231n.github.io/linear-classify/)两节，完成 k-NN 与 Softmax 部分，理解损失函数的形式和梯度是怎么来的。
+
+SVM 在 2026 版作业里已经被移除，可以阅读 [scikit-learn 的支持向量机](https://scikit-learn.org/stable/modules/svm.html)。
+
+再读[优化-1](https://cs231n.github.io/optimization-1/)与[优化-2](https://cs231n.github.io/optimization-2/)，完成两层网络的实现，理解反向传播如何逐层传递梯度。
+
+神经网络的结构与激活函数可以参考[神经网络-1](https://cs231n.github.io/neural-networks-1/)。
 
 > [!NOTE]
 > 这里简要解释传统机器学习与深度学习的区别。二者最核心的区别在于如何学习和利用数据的「特征」。
@@ -81,46 +112,71 @@ $\color{red}{\text{但是这是进实验室最基本的要求，大家都是这�
 >
 > 对于基于树的复杂集成算法（如随机森林、XGBoost、决策树），由于其实现逻辑与神经网络差异较大，只需要了解原理并掌握 [scikit-learn](https://scikit-learn.org/stable/) 即可，无需从零实现。
 >
-> 但对于线性分类器（k-NN, SVM, Softmax），它们是理解神经网络损失函数和梯度下降的基石，你需要在作业 1 中实现。
+> 但对于线性分类器（k-NN, SVM, Softmax），它们是理解神经网络损失函数和梯度下降的基石。其中 k-NN 与 Softmax 需要在本作业中从零实现；SVM 在 2026 版作业里已经被移除，理解原理和损失函数形式即可。
 
-### 作业 1 - Two-layer Neural Network
+### 作业 2 - CNN 与训练技巧
 
-完成 [CS231n Assignment 1](https://cs231n.github.io/assignments2025/assignment1/)，并写一份文档来描述你在完成作业过程中遇到的挑战和解决方案。
+- CNN
+- 完成 [CS231n Assignment 2](https://cs231n.github.io/assignments2026/assignment2/) 的前四道题：批量归一化、Dropout、卷积神经网络、PyTorch 图像分类
+- 理解卷积与池化的计算方式，以及批量归一化和 Dropout 的作用
 
-> [!NOTE]
-> 本轮作业的目标是让你从零实现一个两层神经网络，并且通过这个过程来深入理解神经网络的基本原理和反向传播算法。
+先读[神经网络-2](https://cs231n.github.io/neural-networks-2/)，完成批量归一化与 Dropout，理解两者的前向计算与反向传播，以及 Dropout 在训练和测试时的差异。
 
-### 作业 2 - CNN
+再读[卷积网络](https://cs231n.github.io/convolutional-networks/)，完成卷积网络的实现，理解感受野与输出尺寸的计算方式。
 
-完成 [CS231n Assignment 2](https://cs231n.github.io/assignments2025/assignment2/)，并写一份文档来描述你在完成作业过程中遇到的挑战和解决方案。
+PyTorch 那题可以参考[神经网络-3](https://cs231n.github.io/neural-networks-3/)。
+
+作业包里的最后一题是 RNN 图像描述，留到作业 3 再做。
 
 > [!TIP]
-> 完成作业 1 后，你成功实现了一个简单的二层神经网络，并在 CIFAR-10 数据集上进行了训练。
+> 作业 1 实现了一个简单的二层神经网络，并在 CIFAR-10 数据集上进行了训练。
 >
 > 然而，现实世界中的神经网络远比两层神经网络复杂得多。为了应对更复杂的任务，我们需要引入更多的层次、更复杂的结构，以及更高效的训练方法。
 >
 > CNN 是深度学习中最重要的网络结构之一，广泛应用于计算机视觉任务中。通过卷积操作，CNN 能够有效地捕捉图像中的空间特征，从而大幅提升图像分类、目标检测等任务的性能。
 >
-> 因此，作业 2 将聚焦 CNN，并进一步探索现代深度学习框架（如 PyTorch）的使用方法。
+> 因此，作业 2 将聚焦 CNN，进一步探索现代深度学习框架（如 PyTorch）的使用方法。
 >
 > 完成这次作业后请思考，我们为什么需要 PyTorch 这样的框架？
 
-### 作业 3 - CV / LLM
-
-完成 [CS231n Assignment 3](https://cs231n.github.io/assignments2025/assignment3/)，并写一份文档来描述你在完成作业过程中遇到的挑战和解决方案。
-
-完成 [CS224n](https://web.stanford.edu/class/cs224n/)，并写一份文档来描述你在完成作业过程中遇到的挑战和解决方案。
+### 作业 3 - CV / NLP
 
 > [!TIP]
 > 人工智能的研究方向主要分为计算机视觉和自然语言处理，当然也包括其他更多方向。
 >
-> 鉴于每个人的时间和精力有限，在完成了作业 2 之后，你可以选择继续完成 CS231n 的作业，深入学习计算机视觉相关的内容；或者转向 CS224n，探索自然语言处理领域的知识。
+> 鉴于每个人的时间和精力有限，作业 3 的 CV 与 NLP 两条路线只需要选一个完成。福大比较强的实验室基本都是 CV 的，所以更推荐你选择 CV。
 >
-> 不过对于本科生而言，建议两个方向都尝试一下。
->
-> 福大比较强的实验室基本都是 CV 的，所以我更推荐你选择 CV。
->
-> 建议选择 LLM 路线的同学先完成 cs224n 的前三个 assignment，然后再去完成 cs231n（毕竟都写了前两个了，而且有些东西是通用的）
+> 建议选择 NLP 路线的同学先把 CS224n 的 Assignment 1 - 3 做完（4 是 transformer），再去做 CS231n Assignment 3 部分，毕竟前两个作业都写过，有些东西是通用的。
+
+#### 作业 3 - CV
+
+- RNN、LSTM、GAN、Transformer、自监督学习、DDPM、CLIP、DINO
+- 完成 [CS231n Assignment 2](https://cs231n.github.io/assignments2026/assignment2/) 的最后一题：用 RNN 做图像描述
+- 完成 [CS231n Assignment 3](https://cs231n.github.io/assignments2026/assignment3/) 的四个 notebook
+- 理解 LSTM 的门控机制和 GAN 的对抗训练
+
+可以先看 CS231n 笔记的[循环神经网络](https://cs231n.github.io/rnn/)一节，把 RNN 的结构和沿时间反向传播弄清楚，再做图像描述那题。
+
+LSTM 的推导也在这一节里，代码实现可以跑 [d2l 第 9.2 节](https://zh.d2l.ai/chapter_recurrent-modern/lstm.html)。
+
+Assignment 3 包含 Transformer 图像描述、自监督学习、扩散模型、CLIP 与 DINO 四个 notebook，先读 [d2l 第 10 章](https://zh.d2l.ai/chapter_attention-mechanisms/index.html)再动手，重点是理解自注意力的计算过程。
+
+扩散模型、CLIP 与 DINO 目前没有合适的中文教材，直接看作业包里的说明和原始论文。
+
+GAN 在 2026 版作业里已经移除，可以参考 [d2l 英文版第 20 章](https://d2l.ai/chapter_generative-adversarial-networks/index.html)，或者参考资料里的李沐 GAN 论文精读。
+
+LSTM 和 GAN 都不要求从零实现，理解门控和对抗训练即可。
+
+#### 作业 3 - NLP
+
+- 词向量、注意力机制与 Transformer
+- 完成 [CS224n](https://web.stanford.edu/class/cs224n/) 的 Assignment 1 - 4：词向量、神经网络基础与依存句法分析、自注意力与 Transformer
+
+选这条路的话，先读 [d2l 第 14 章](https://zh.d2l.ai/chapter_natural-language-processing-pretraining/index.html)补词向量。
+
+再对照 [d2l 第 10 章](https://zh.d2l.ai/chapter_attention-mechanisms/index.html)学自注意力。
+
+讲义和作业说明见 [CS224n 课程页面](https://web.stanford.edu/class/cs224n/)。
 
 ## 推荐教程与参考资料
 
@@ -139,7 +195,7 @@ $\color{red}{\text{但是这是进实验室最基本的要求，大家都是这�
 >
 > 2025 年秋季版课程在前几讲就引入了较为复杂的概念，与 2024 年春季版相比难度提升较多，内容变化也较大。建议初学者优先学习 2024 年春季版课程或直接阅读教程课本，无需观看 2025 年秋季版。
 >
-> 学习生成式 AI 导论时，无需看完所有课程或课本，只需根据文档 1 的要求，针对性地学习相关内容即可。
+> 学习生成式 AI 导论时，无需看完所有课程或课本，只需根据作业 0 的要求，针对性地学习相关内容即可。
 
 ### Sklearn
 
@@ -159,30 +215,40 @@ $\color{red}{\text{但是这是进实验室最基本的要求，大家都是这�
 
 1. 前三轮知识：尤其是 NumPy、Pandas 和 Matplotlib。Python 基础不必多说；学习爬虫的作用主要是让你在未来进行人工智能研究时，具备补全数据或爬取所需数据的能力。
 2. 多元函数复合求导（求偏导）：具体内容在高等数学 B 下学期讲授，可参考[宋浩高等数学](https://www.bilibili.com/video/BV1Eb411u7Fw?spm_id_from=333.788.videopod.episodes&vd_source=0272bb7dd0d8d9302c55fc082442b9e3&p=96)，直到能够完成一些简单的求偏导计算。
-3. 线性代数：计算机专业的同学大一上已经开设线性代数课程。无论对于已学或未学的同学，都可以参考[线性代数的本质](https://www.bilibili.com/video/BV1Ys411k7yQ/?spm_id_from=333.337.search-card.all.click&vd_source=0272bb7dd0d8d9302c55fc082442b9e3)系列视频加深对线性代数的理解。
+3. 线性代数：计算机专业的同学大一上已经开设线性代数课程。无论对于已学或未学的同学，都可以参考[线性代数的本质](https://www.bilibili.com/video/BV1Ys411k7yQ/?spm_id_from=333.337.search-card.all.click&vd_source=0272bb7dd0d8d9302c55fc082442b9e3)系列视频加深对线性代数的理解；如果希望更成体系，可以配合 [MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) 学习。
 4. NumPy：作业将大量使用 NumPy 进行向量化（Vectorization）计算。请务必完成 [CS231n 官方 NumPy 教程](https://cs231n.github.io/python-numpy-tutorial/)。对于不熟悉的 API，学会使用搜索引擎和大语言模型工具进行查询。
 5. 矩阵求导：这是理解反向传播数学原理的关键。不必畏惧，你只需掌握基础的求偏导知识即可入门。推荐通过以下资源学习：
    - [B 站视频教程](https://www.bilibili.com/video/BV1av4y1b7MM/)
    - [知乎文章讲解](https://zhuanlan.zhihu.com/p/273729929)
+   - [Matrix Calculus for Deep Learning](https://explained.ai/matrix-calculus/)：从标量一路推到矩阵，比单篇科普文章系统
+   - [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)：查表用，不必通读
 
 需要注意，关于 torch 的知识并不需要你提前掌握，assignment 2 的最后一个 lab 应该会有给出教程。
 
-但是以防万一，这里还是给出 CS224n 的 PyTorch 速成：
+但是以防万一，这里还是给出一些补充材料：
 
-[CS224n PyTorch 速成](https://colab.research.google.com/drive/1Pz8b_h-W9zIBk1p2e6v-YFYThG1NkYeS?usp=sharing)
+- [PyTorch 60 分钟入门](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)：官方教程，比速成材料更成体系
+- [PyTorch Autograd 机制](https://pytorch.org/docs/stable/notes/autograd.html)：理解自动求导，也正好回答作业 2 里「为什么需要 PyTorch」那个思考题
+- [CS224n PyTorch 速成](https://colab.research.google.com/drive/1Pz8b_h-W9zIBk1p2e6v-YFYThG1NkYeS?usp=sharing)
 
 #### CS231n 课程相关链接
 
 Stanford CS231n: Convolutional Neural Networks for Visual Recognition
 
-- [CS231n 2026 Notes](https://cs231n.github.io/)
-- [CS231n 2026 Spring](https://cs231n.stanford.edu/assignments.html)
-- [CS231n 2025 Spring](https://cs231n.stanford.edu/2025/assignments.html)
-- [CS231n 2024 Spring](https://cs231n.stanford.edu/2024/assignments.html)
+- [CS231n 2026 课程主页](https://cs231n.stanford.edu/)
+- [CS231n 2026 作业页面](https://cs231n.stanford.edu/assignments.html)
+- [CS231n 2026 课程笔记](https://cs231n.github.io/)
+- [CS231n 2026 Assignment 1](https://cs231n.github.io/assignments2026/assignment1/)
+- [CS231n 2026 Assignment 2](https://cs231n.github.io/assignments2026/assignment2/)
+- [CS231n 2026 Assignment 3](https://cs231n.github.io/assignments2026/assignment3/)
 - [课程中文翻译](https://zhuanlan.zhihu.com/p/21930884)（采用 Python 2.7 版本，已过时，可作为辅助理解材料）
 
 > [!TIP]
-> 需要注意，CS231n 课程官方笔记页面提供的是 26 版的作业（预计 2026.5 更新完毕），可以通过上述链接获取到往年版本已经更新完毕的作业。但由于 CS231n 的笔记页面是一个单独维护的静态页面，所以无法通过修改链接的方法查看往年笔记，当前笔记版本为 2026 版。你可以选择完成 24、25 或者 26 年的版本，无论选择哪个版本，核心任务和学习目标是一致的。
+> CS231n 的课程主页与作业页面每年更新，往年的存档页面（如 `2024/assignments.html`、`2025/assignments.html`）以及对应的 starter code 下载链接均已下线，目前只有 2026 版可以完整获取。
+>
+> 因此请统一使用 2026 版完成作业。往年版本的作业说明仍可在 [cs231n.github.io](https://cs231n.github.io/) 的 `assignments2024`、`assignments2025` 路径下查看，但页面里的 starter code 链接指向的是 2026 版压缩包，两者结构并不一致，不建议混用。
+>
+> 另外，课程笔记页面是单独维护的静态页面，无法通过修改链接查看往年笔记，当前版本即 2026 版。
 
 #### CS231n 课程视频
 
@@ -190,10 +256,26 @@ Stanford CS231n: Convolutional Neural Networks for Visual Recognition
 2. 如果觉得 CS231n 的数学推导过多，建议观看[李宏毅老师的机器学习课程](https://www.bilibili.com/video/BV1Wv411h7kN/)，该课程更侧重于从直观角度理解模型原理
 3. [吴恩达老师的机器学习视频](https://www.bilibili.com/video/BV1owrpYKEtP/?spm_id_from=333.337.search-card.all.click&vd_source=0272bb7dd0d8d9302c55fc082442b9e3)
 
-#### CS231n Assignment 3 相关链接
+#### 可视化与直觉
+
+如果对卷积、注意力这些结构缺乏直观感受，可以先玩下面这几个交互式工具，比读文字快得多：
+
+- [CNN Explainer](https://poloclub.github.io/cnn-explainer/)：逐层观察卷积核在图像上提取到了什么
+- [Transformer Explainer](https://poloclub.github.io/transformer-explainer/)：实时查看注意力权重如何分配
+- [TensorFlow Playground](https://playground.tensorflow.org/)：在浏览器里训练一个两层网络，直观感受分类边界的变化
+- [3Blue1Brown 神经网络系列](https://www.3blue1brown.com/topics/neural-networks)：反向传播的几何直觉，B 站有[官方账号](https://space.bilibili.com/88461692)
+
+#### 手写实现
+
+- [Karpathy: Neural Networks Zero to Hero](https://karpathy.ai/zero-to-hero.html)：从 `micrograd` 手写反向传播，一路做到 GPT，与作业 1 的两层网络直接互补
+- [CS231n 官方笔记 optimization-1](https://cs231n.github.io/optimization-1/)：反向传播的解析推导，做作业 1 之前建议先读一遍
+
+#### 序列模型与 Transformer 相关链接
 
 > [!TIP]
-> CS231n 的笔记只包含了 assignment1 与 assignment2 的部分，对于 assignment3 可以参考以下视频
+> 2026 版 CS231n 的 Assignment 3 已经改为 Transformer、自监督学习、扩散模型与 CLIP，不再包含 RNN 与 GAN。
+>
+> 下面这些视频用于补齐 RNN、LSTM 与 GAN 的部分，配合前面作业 3 的说明一起看。
 
 1. [跟李沐学 AI 54 循环神经网络 RNN【动手学深度学习 v2】](https://www.bilibili.com/video/BV1D64y1z7CA/?spm_id_from=333.337.search-card.all.click&vd_source=0272bb7dd0d8d9302c55fc082442b9e3)
 
@@ -219,29 +301,10 @@ Stanford CS231n: Convolutional Neural Networks for Visual Recognition
 
   CS231n 官方和 Google 有合作，只要你有 Google 账号，就可以直接使用 Colab 环境完成作业。
 
-  打开 CS231n [24 Spring Assignment 1](https://cs231n.github.io/assignments2024/assignment1/) 页面或者 [25 Spring Assignment 1](https://cs231n.github.io/assignments2025/assignment1/) 页面，然后观看 Setup 这个视频，按照视频中的步骤操作即可。
+  打开 CS231n [26 Spring Assignment 1](https://cs231n.github.io/assignments2026/assignment1/) 页面，然后观看 Setup 这个视频，按照视频中的步骤操作即可。
 
   这里直接给出这个视频的链接：[CS231N Google Colab Assignment Workflow Tutorial](https://www.youtube.com/watch?v=DsGd2e9JNH4&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fcs231n.github.io%2F)
 
-  如果你使用 2025 版 CS231n，你可能会遇到如下问题：
-
-  使用 Colab 运行 ipynb 文件带有以下两行的代码块，这两行代码在所有 ipynb 文件里面都存在
-
-  ```python
-  %load_ext autoreload
-  %autoreload 2
-  ```
-  
-  如果你没有特地去修改过 Colab 的 Python 运行版本可能会出现如下错误：
-  
-  ```bash
-  ModuleNotFoundError                       Traceback (most recent call last)
-  …………
-  ModuleNotFoundError: No module named 'cs231n'
-  ```
-  
-  解决方法：点击右下角的 `Python 3` 选项，选择“更改运行时类型”将“运行时版本”修改为“2025.07”，然后一定要重启 Colab。重启后再次按顺序运行即可
-  
 - 本地配置环境
 
   本地配置环境的推荐前提是有一台性能较好的电脑，最好有 NVIDIA 显卡（支持 CUDA）。
@@ -299,8 +362,8 @@ Stanford CS231n: Convolutional Neural Networks for Visual Recognition
 
   注意是重启，大部分未经过特别设置的 Windows，关机等同于深度睡眠，并不会修改你的系统设置。
 
-> [!NOTE]
-> 更新中。
+  > [!NOTE]
+  > 本节仍在持续补充，如果你在配置环境时遇到其他问题，欢迎在群里反馈。
 
 ### CS224n
 
