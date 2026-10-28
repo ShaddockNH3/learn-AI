@@ -49,41 +49,6 @@ $\color{red}{\text{开始之前，请确保你拥有充足的前端 / 后端知�
 
 对于 AI 应用，我们更希望的路线是学习完 AI 底层，学习一份后端 / 前端技术，然后再来学习 Agent，乃至更进阶的 AI 应用算法、Infra 等，这也是我们设置 Application0 的原因。
 
-### 文档 1
-
-大部分现代人工智能库已经提供了非常多高度封装的方法供开发者去调用，这些方法很好的屏蔽了底层的细节，使得开发者不用反复纠结于晦涩的数学公式推导，将精力放在实际的产品开发中。
-
-但反复的实践已经证明了，只会调库其实是远远不够的，掌握部分底层相关的知识可以更好的帮助我们进行 AI 应用开发。
-
-因此，本次的任务要求你阅读以下几份资料：
-
-1. [Andrej Karpathy《Let's build GPT: from scratch, in code, spelled out.》](https://www.bilibili.com/video/BV1K4LPzLEoA/)
-
-2. [nanoGPT](https://github.com/karpathy/nanoGPT)
-
-3. [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-
-4. [Schariac125 简单科普博客：自顶向下——可能要懂的底层原理简单讲解](https://schariac125.online/2026/05/31/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/)
-
-5. （Bonus）论文 [Attention Is All You Need](https://arxiv.org/abs/1706.03762) 及其讲解视频 [Transformer 论文逐段精读【论文精读】跟李沐学 AI](https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.337.search-card.all.click)
-
-完成上述任务后，你需要写一篇文档来阐述你的理解。
-
-> [!NOTE]
-> 如果你对 Pytorch 感兴趣的话，以下是推荐你可以去阅读和完成的资料和任务，这些并不做强制性要求。
->
->1. [Pytorch 官方文档](https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
->
->2. [pytorch-deep-learning](https://github.com/mrdbourke/pytorch-deep-learning)
->
->3. 基于 mnist 数据集的 CNN 图像分类任务（资料太多了，自己找去吧）
->
->4. [Cassava Leaf Disease Classification](https://www.kaggle.com/competitions/cassava-leaf-disease-classification/overview)
->
->5. [Global Wheat Detection](https://www.kaggle.com/competitions/global-wheat-detection)
->
-> 一般而言并不建议初学者一上来就去阅读 Pytorch 官方文档，你可以从 pytorch-deep-learning 项目开始做起一步步学会使用 Pytorch。
-
 ### 作业 1 - 机器学习与深度学习
 
 LLM 的底层实现基于深度学习神经网络，深度学习的前身是机器学习。
@@ -130,7 +95,42 @@ LLM 的底层实现基于深度学习神经网络，深度学习的前身是机�
 
 1. [2017 Sky Images and Photovoltaic Power Generation Dataset for Short-term Solar Forecasting (Stanford Raw)](https://purl.stanford.edu/sm043zf7254)
 
-### 作业 2 - 现代 LLM 思想
+### 作业 2 - CNN 与 Transformer
+
+大部分现代人工智能库已经提供了非常多高度封装的方法供开发者去调用，这些方法很好的屏蔽了底层的细节，使得开发者不用反复纠结于晦涩的数学公式推导，将精力放在实际的产品开发中。
+
+但反复的实践已经证明了，只会调库其实是远远不够的，掌握部分底层相关的知识可以更好的帮助我们进行 AI 应用开发。
+
+因此，本次的任务要求你阅读以下几份资料：
+
+1. [Andrej Karpathy《Let's build GPT: from scratch, in code, spelled out.》](https://www.bilibili.com/video/BV1K4LPzLEoA/)
+
+2. [nanoGPT](https://github.com/karpathy/nanoGPT)
+
+3. [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+
+4. [Schariac125 简单科普博客：自顶向下——可能要懂的底层原理简单讲解](https://schariac125.online/2026/05/31/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/)
+
+5. （Bonus）论文 [Attention Is All You Need](https://arxiv.org/abs/1706.03762) 及其讲解视频 [Transformer 论文逐段精读【论文精读】跟李沐学 AI](https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.337.search-card.all.click)
+
+完成上述任务后，你需要写一篇文档来阐述你的理解。
+
+> [!NOTE]
+> 如果你对 Pytorch 感兴趣的话，以下是推荐你可以去阅读和完成的资料和任务，这些并不做强制性要求。
+>
+>1. [Pytorch 官方文档](https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
+>
+>2. [pytorch-deep-learning](https://github.com/mrdbourke/pytorch-deep-learning)
+>
+>3. 基于 mnist 数据集的 CNN 图像分类任务（资料太多了，自己找去吧）
+>
+>4. [Cassava Leaf Disease Classification](https://www.kaggle.com/competitions/cassava-leaf-disease-classification/overview)
+>
+>5. [Global Wheat Detection](https://www.kaggle.com/competitions/global-wheat-detection)
+>
+> 一般而言并不建议初学者一上来就去阅读 Pytorch 官方文档，你可以从 pytorch-deep-learning 项目开始做起一步步学会使用 Pytorch。
+
+### 作业 3 - 现代 LLM 思想
 
 在现代的框架下，调用大语言模型只需要挑很少量的参数，例如 Temperature、Top-K、Top-P 等等，而不需要关心模型的底层实现细节。
 
@@ -210,8 +210,6 @@ Hugging Face 是一个友好的开源社区，在上面你可以找到绝大多�
 - 必须使用 uv 管理项目依赖和运行环境。
 - 校验模型输出的调课规则是否符合预期格式。
 - 使用在之前任务爬取的教务通知验证你的解析器，确保它能够正确解析调课通知。
-
-### 作业 3 - JSON 生成与解析器
 
 ## 作业 - 玩具级 AI 应用
 
